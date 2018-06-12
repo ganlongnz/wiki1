@@ -1,12 +1,12 @@
 ---
-title: "Sphinx (search engine) 使用笔记"
+title: "Sphinx (search engine) 使用笔记 v1"
 layout: page
 date: 2016-11-19 19:00
 ---
 
 [TOC]
 
-# Sphinx 简介
+# Sphinx 简介v1
 
 [Sphinx](http://sphinxsearch.com/) 是一个轻量级的全文检索引擎。
 
