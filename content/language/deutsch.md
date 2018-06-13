@@ -8,10 +8,15 @@ date: 2016-11-19 19:00
 
 # Writting
 
+- fs
+
 [Sphinx](http://sphinxsearch.com/) 是一个轻量级的全文检索引擎。
+
+- fs
 
 ## 部分同类开源产品v1
 
+- fs
 - [Searchdaimon ES](http://www.searchdaimon.com/) 一个针对fsl公司数据和网站的搜索引擎。
 
 fsfs fsaf 另外，Redis 的不稳定版已经支持[加载外部模块](http://antirez.com/news/106)，[RediSearch](https://github.com/RedisLabsModules/RediSearch) 就是一个全文检索的模块。以 Redis 社区的活跃程度，此类基于 Redis 模块方式的检索引擎应该会越来越成熟。
