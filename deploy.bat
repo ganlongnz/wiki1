@@ -14,6 +14,10 @@ cd search
 sed -i  's#href="/static#href="../static#g' *
 cd ..
 
+cd language
+sed -i  's#href="/static#href="../static#g' *
+cd ..
+
 git add -A
 git commit -m "upload gh-pages"
 git pull origin gh-pages
