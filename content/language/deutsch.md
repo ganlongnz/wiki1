@@ -10,7 +10,7 @@ date: 2016-11-19 19:00
 
 - `discretion`
 
-1. at 
+1. at; / 
 
 2. leave
 
