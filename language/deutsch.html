@@ -27,12 +27,12 @@
 
   <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#writting">Writting</a><ul>
-<li><a href="#_1">部分同类开源产品</a></li>
-<li><a href="#_2">基本原理</a></li>
-<li><a href="#_3">部分功能</a></li>
-<li><a href="#_4">中文支持</a></li>
+<li><a href="#v1">部分同类开源产品v1</a></li>
+<li><a href="#_1">基本原理</a></li>
+<li><a href="#_2">部分功能</a></li>
+<li><a href="#_3">中文支持</a></li>
 <li><a href="#api">API 协议</a><ul>
-<li><a href="#_5">请求</a></li>
+<li><a href="#_4">请求</a></li>
 </ul>
 </li>
 </ul>
@@ -40,13 +40,8 @@
 </ul>
 </div>
 <h1 id="writting">Writting</h1>
-<ul>
-<li>discretion</li>
-</ul>
-<p>at; / </p>
-<p>i leave</p>
 <p><a href="http://sphinxsearch.com/">Sphinx</a> 是一个轻量级的全文检索引擎。</p>
-<h2 id="_1">部分同类开源产品</h2>
+<h2 id="v1">部分同类开源产品v1</h2>
 <ul>
 <li><a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> 基于 Lucene 的开源搜索引擎，支持 RESTful API。</li>
 <li><a href="https://github.com/huacnlee/redis-search">Redis-Search</a> 基于 Redis 的高效搜索组件。</li>
@@ -54,7 +49,7 @@
 </ul>
 <p>另外，Redis 的不稳定版已经支持<a href="http://antirez.com/news/106">加载外部模块</a>，<a href="https://github.com/RedisLabsModules/RediSearch">RediSearch</a> 就是一个全文检索的模块。以 Redis 社区的活跃程度，此类基于 Redis 模块方式的检索引擎应该会越来越成熟。</p>
 <p>查看更多<a href="https://en.wikipedia.org/wiki/Full-text_search">同类产品</a>。</p>
-<h2 id="_2">基本原理</h2>
+<h2 id="_1">基本原理</h2>
 <p>Sphinx 包含几个可执行程序：wordbreaker，indexer，searchd 等。</p>
 <ul>
 <li>
@@ -67,7 +62,7 @@
 <p>searchd 为客户端提供检索服务，解析请求，读取索引数据，返回结果给客户端。</p>
 </li>
 </ul>
-<h2 id="_3">部分功能</h2>
+<h2 id="_2">部分功能</h2>
 <ul>
 <li>支持的数据源：</li>
 <li>MySQL, PostgreSQL, MS QL...</li>
@@ -79,14 +74,14 @@
 <p>支持实时增加索引(RT 实时索引)，目前 RT 实时索引仅支持 SphinxQL 协议操作，不支持 API 方式。</p>
 </li>
 </ul>
-<h2 id="_4">中文支持</h2>
+<h2 id="_3">中文支持</h2>
 <ul>
 <li><a href="http://www.coreseek.cn/">Coreseek</a></li>
 <li><a href="http://sphinxsearchcn.github.io/">sphinx-for-chinese</a> 注意：这里的 sphinx-for-chinese 是基于 sphinx 2.2.1 版的，如果需要 Golang 客户端操作 SphinxQL 语句，根据 Go 的 <a href="https://github.com/go-sql-driver/mysql">mysql</a> 说明，至少要求 Sphinx(2.2.3) 以上版本。我尝试了下，的确不能操作成功，改用这个<a href="https://github.com/eric1688/sphinx">较新的版本</a>后才解决 Go 客户端操作 SphinxQL 的问题。</li>
 </ul>
 <h2 id="api">API 协议</h2>
 <p>Sphinx 源码已经提供了 Python，Ruby，PHP，Java，C 这几种语言的 API 包了，如需实现其他语言的 API 包，就要分析 Sphinx API 协议了。具体可以通过 Python 的客户端 <code>sphinx-x.x.x/api/sphinxapi.py</code> 分析。下面分析一个 wireshark 抓取的 Sphinx 请求包:</p>
-<h3 id="_5">请求</h3>
+<h3 id="_4">请求</h3>
 <p>发出一个检索 "hello" 的请求，返回数量限制(limit)为 20。</p>
 <p>DATA 内容:</p>
 <div class="hlcode"><pre><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">14</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span>
@@ -140,7 +135,7 @@
       <span>
         <p>Copyright © 2018 .
         Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.</p>
-        <p>Site Generated 2018-06-13 21:56:13</p>
+        <p>Site Generated 2018-06-13 21:58:46</p>
       </span>
     </div>
   </body>
