@@ -1,31 +1,19 @@
-﻿---
-title: "English"
+---
+title: "Sphinx (search engine) 使用笔记 v1"
 layout: page
 date: 2016-11-19 19:00
 ---
 
 [TOC]
 
-# Writting
-
-<!## Pronunciation>
+# Sphinx 简介v1
 
 [Sphinx](http://sphinxsearch.com/) 是一个轻量级的全文检索引擎。
 
-
-# Reading
-- `discretion` 
-1. at someone's dicretion; Exactly how much to tip a server is at the discretion of the customer. / You can cancel the service at your (own) discretion. 
-2. leave to the discretion of; I'll leave it to your discretion.
-
-# Others
-- a `mass` appeal (attraction) of the Peppa Pig cartoon
-- `meme` (an amusing or interesting item, such as a captioned picture)
-
 ## 部分同类开源产品
 
-- [Elasticsearch](https://www.elastic.co/products/elasticsearch) 基于 Lucene 的开源搜索引擎，支持 RESTful API。
-- [Redis-Search](https://github.com/huacnlee/redis-search) 基于 Redis 的高效搜索组件。
+- [Elasticsearch](https://drive.google.com/file/d/1DasOWAvYWcPfLG1UbUCVN-UzpXHXdLJa/view) 基于 Lucene 的开源搜索引擎，支持 RESTful API。
+- [Redis-Search](https://github.com/huacnlee/redis-search) This is test. 基于 Redis 的高效搜索组件。
 - [Searchdaimon ES](http://www.searchdaimon.com/) 一个针对公司数据和网站的搜索引擎。
 
 另外，Redis 的不稳定版已经支持[加载外部模块](http://antirez.com/news/106)，[RediSearch](https://github.com/RedisLabsModules/RediSearch) 就是一个全文检索的模块。以 Redis 社区的活跃程度，此类基于 Redis 模块方式的检索引擎应该会越来越成熟。
