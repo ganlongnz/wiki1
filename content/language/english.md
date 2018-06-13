@@ -8,9 +8,19 @@ date: 2016-11-19 19:00
 
 # Writting
 
-# Reading
+<!## Pronunciation>
 
 [Sphinx](http://sphinxsearch.com/) 是一个轻量级的全文检索引擎。
+
+
+# Reading
+- `discretion` 
+1. at someone's dicretion; Exactly how much to tip a server is at the discretion of the customer. / You can cancel the service at your (own) discretion. 
+2. leave to the discretion of; I'll leave it to your discretion.
+
+# Others
+- a `mass` appeal (attraction) of the Peppa Pig cartoon
+- `meme` (an amusing or interesting item, such as a captioned picture)
 
 ## 部分同类开源产品
 
